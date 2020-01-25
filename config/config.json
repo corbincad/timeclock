@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "MilohReese!1",
+    "password": null,
     "database": "timeclock",
     "host": "127.0.0.1",
     "dialect": "mysql",
