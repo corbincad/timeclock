@@ -1,0 +1,75 @@
+:focus{
+    outline: none;
+    }
+    .input-container{
+    width: 20%;
+    margin: 0px;
+    position: relative;
+    }
+    input[type="text"]{
+    color: #1d9af2;
+    width: 70%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    background-color: rgb(19, 23, 44);
+    border: none;
+    text-align: center;
+    zoom: 2.4;
+
+}
+    .effect-1~.focus-border{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3399FF;
+    transition: 0.4s;
+    
+    
+}
+    
+    .effect-1:focus~.focus-border {
+    width: 70%;
+    transition: 0.4s;
+    }
+
+    img{
+
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 500px;
+        margin-top: 50px;
+    }
+
+    button {
+        color: #1D9AF2;
+        background-color: #292D3E;
+        border: 2px solid #1D9AF2;
+        border-radius: 4px;
+        padding: 15px 18px 30px 15px;
+        cursor: pointer;
+        height:32px;
+        font-size:14px;
+        box-shadow: 0 0 4px #999;
+        background-position: center;
+        transition: background .5s;
+
+        
+        }
+        button:hover {
+        background:#47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+        color: white;
+        }
+        button:active{
+        background-color:#292d3e;
+        background-size: 100%;
+        transition: background 0s;
+        }
+
+        body{
+            background-color: black
+        }
+
+    
