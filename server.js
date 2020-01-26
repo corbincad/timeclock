@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("./public"));
 
-require('./routes/api-routes')(app);
+// require('./routes/api-routes')(app);
 
 db.sequelize.sync().then(function () {
 
