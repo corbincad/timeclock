@@ -1,6 +1,8 @@
 const db = require('./models');
 const express = require("express");
 
+// const homepage = require('./views/layouts/homepage');
+
 const app = express();
 const PORT = process.env.PORT || 8080;
 
