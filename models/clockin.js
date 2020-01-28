@@ -5,9 +5,8 @@ module.exports = function(sequelize, DataTypes){
 
     Model.associate = function(models){
         models.Clockin.belongsTo(models.Employee);
-        models.Clockin.belongsTo(models.Clockout);
     };
 
     return Model;
-    
+
 }
