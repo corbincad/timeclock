@@ -5,5 +5,11 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         }
     });
+
+    Model.associate = function(models) {
+        models.Department.hasMany(models.Employee);
+    };
+
     return Model;
-}
+
+};
