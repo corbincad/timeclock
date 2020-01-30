@@ -1,9 +1,9 @@
-var input = document.getElementById("id-input");
+$(document).ready(function(){
 
-input.addEventListener("keyup", function(event){
-    if (event.keyCode === 13){
-
-        event.preventDefault();
-        console.log(input.value);
-    }
+    $('#pinCode').keypress(function(event){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode === 13 ){
+            console.log($('#pinCode').val().trim())
+        }
+    })
 })
