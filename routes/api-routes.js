@@ -1,6 +1,6 @@
 const db = require('../models');
 const homePage = require('../views/layouts/homePage');
-const loginScreen = require('../views/timeStamp');
+const loginScreen = require('../views/timeStamp-login');
 
 module.exports = function (app) {
     app.get("/", function (req, res) {

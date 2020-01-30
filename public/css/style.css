@@ -18,6 +18,7 @@ body{
 @import url('https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300'); */
 * {
  box-sizing: border-box;
+ font-family: 'Kanit', sans-serif;
 }
 
 body {
