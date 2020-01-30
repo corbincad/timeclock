@@ -6,4 +6,4 @@ $(document).ready(function(){
             console.log($('#pinCode').val().trim())
         }
     })
-})
+});
