@@ -8,21 +8,13 @@
         zoom: 1;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lato:300);
-
-body{
-  background-color: #4D5057;
-}
-
-/* @import url('https://fonts.googleapis.com/css?family=Roboto');
-@import url('https://fonts.googleapis.com/css?family=Andada|Permanent+Marker|Raleway:300'); */
 * {
  box-sizing: border-box;
  font-family: 'Kanit', sans-serif;
 }
 
 body {
- background: rgb(37, 37, 37);;
+ background: #17161e;
  position: relative;
  font-family: 'Roboto', sans-serif;
  color: #fff;
@@ -183,3 +175,43 @@ body {
 #hastylink:hover {
 	opacity: 1
 }
+
+
+
+
+
+<!--CSS BELOW IS SPECIFICALLY FOR BUTTONS--/
+
+body {
+  padding-top: 60px;
+  font-family: 'Roboto';
+  text-align: center;
+}
+
+.color-change {
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 14px 80px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #00A6FF;
+  font-size: 1.5rem;
+  font-weight: 100;
+  border: 1px solid #fff;
+  box-shadow: 2px 2px 5px #AFE9FF;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+}
+
+.color-change:hover {
+  color: #17161e;
+  border: 1px solid #17161e;
+  box-shadow: 2px 2px 20px #AFE9FF;
+}
+
+button.color-change {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
