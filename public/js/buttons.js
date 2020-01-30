@@ -12,10 +12,10 @@ $(document).ready(function () {
 
 });
 
-var click = false;
 function mouseDown() {
-    click = true;
-    console.log('Button being clicked');
+    console.log('BUTTONS ARE CLICKABLE');
 }
+
+
 
 

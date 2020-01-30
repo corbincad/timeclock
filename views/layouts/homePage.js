@@ -15,7 +15,7 @@ const render = function (data) {
 
         <button onMouseDown="mouseDown()" id="deparmentsBtn" class="color-change">DEPARTMENTS</button>
 
-        <button id="reportsBtn" class="color-change">REPORTS</button>
+        <button onMouseDown="mouseDown()" id="reportsBtn" class="color-change">REPORTS</button>
 
         <div id="mainContent">
         ${data}
