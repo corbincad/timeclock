@@ -12,9 +12,9 @@ const render = function(data){
 </head>
 <body>
 
-    <button class="color-change">DEPARTMENTS</button>
+    <button id="deparmentsBtn" class="color-change">DEPARTMENTS</button>
 
-    <button class="color-change">REPORTS</button>
+    <button id="reportsBtn" class="color-change">REPORTS</button>
    
 </body>
 </html>
