@@ -1,5 +1,22 @@
 $(document).ready(function () {
 
+
+    $('#settingsBtn').on('click', function(event){
+        event.preventDefault();
+        location.href = '/settings';
+    })
+
+    $('#addDepartment').on('click', function(event){
+        event.preventDefault();
+        location.href = '/settings/adddepartments';
+    });
+
+    $('#employeePage').on('click', function(event){
+        event.preventDefault();
+        location.href = '/settings/addemployees'
+    })
+
+    
     $('#pinCode').keypress(function (event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 13) {
@@ -16,7 +33,7 @@ $(document).ready(function () {
             }
 
             function addDepartment(dep){
-                $.post('/settings/departments', dep, function(){
+                $.post('/settings/adddepartments', dep, function(){
                     $('#depName').val('');
                 })
             }
@@ -40,7 +57,7 @@ $(document).ready(function () {
         
         console.log(newEmployee);
         function addEmployee (employee){
-            $.post('/settings/employees', employee, function(){
+            $.post('/settings/addemployees', employee, function(){
                 $('#firstName').val('');
                 $('#lastName').val('');
                 $('#email').val('');
@@ -48,16 +65,6 @@ $(document).ready(function () {
         };
 
         addEmployee(newEmployee);
-    });
-
-    $('#settingsBtn').on('click', function(event){
-        event.preventDefault();
-        location.href = '/settings';
-    })
-
-    $('#addDepartment').on('click', function(event){
-        event.preventDefault();
-        location.href = '/settings/departments';
     });
 
 });

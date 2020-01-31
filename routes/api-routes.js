@@ -14,21 +14,21 @@ module.exports = function (app) {
         res.send(homePage.render(settings.render()));
     });
 
-    app.get("/settings/departments", function(req, res) {
+    app.get("/settings/adddepartments", function(req, res) {
         res.send(homePage.render(departments.render()));
     });
 
-    app.get("/settings/employees", function(req, res) {
+    app.get("/settings/addemployees", function(req, res) {
         res.send(homePage.render(employees.render()));
     });
 
-    app.post("/settings/departments", function(req, res) {
+    app.post("/settings/adddepartments", function(req, res) {
         db.Department.create(req.body).then(function(data) {
             res.json(data)
         });
     });
 
-    app.post("/settings/employees", function(req, res) {
+    app.post("/settings/addemployees", function(req, res) {
         db.Employee.create(req.body).then(function(data){
             res.json(data);
         })
