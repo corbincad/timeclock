@@ -32,7 +32,7 @@ const render = function (data) {
 
     <div class="columns">
 
-        <div class="column" id="mainContent">
+        <div class="column" >
             ${data}
         </div>
 
@@ -49,7 +49,7 @@ const render = function (data) {
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous">
         </script>
-        
+
         <script src="/js/buttons.js"></script>
     
     </body>
