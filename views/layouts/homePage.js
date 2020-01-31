@@ -21,11 +21,11 @@ const render = function (data) {
     <div class="columns">
 
         <div class="column">
-            <button onMouseDown="mouseDown()" id="reportsBtn" class="color-change">REPORTS</button>
+            <button id="reportsBtn" class="color-change">REPORTS</button>
         </div>
 
         <div class="column">
-            <button onMouseDown="mouseDown()" id="settingsBtn" class="color-change">SETTINGS</button>
+            <button id="settingsBtn" class="color-change">SETTINGS</button>
         </div>
 
     </div>
