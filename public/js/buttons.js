@@ -51,8 +51,15 @@ $(document).ready(function () {
     });
 
     $('#settingsBtn').on('click', function(event){
-
+        event.preventDefault();
+        location.href = '/settings';
     })
+
+    $('#addDepartment').on('click', function(event){
+        event.preventDefault();
+        location.href = '/settings/departments';
+    });
+
 });
 
 
