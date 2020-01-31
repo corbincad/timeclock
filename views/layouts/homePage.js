@@ -47,16 +47,11 @@ const render = function (data) {
         <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-<<<<<<< HEAD
         crossorigin="anonymous">
         </script>
-
-        <script src="js/buttons.js"></script>
+        
+        <script src="/js/buttons.js"></script>
     
-=======
-        crossorigin="anonymous"></script>
-    <script src="/js/buttons.js"></script>
->>>>>>> 2308df70e75fb99b039f212de5826efbb7d8fca5
     </body>
     </html>`
 };
