@@ -21,6 +21,18 @@ module.exports = function (app) {
     app.get("/settings/employees", function(req, res) {
         res.send(homePage.render(employees.render()));
     });
+
+    app.post("/settings/departments", function(req, res) {
+        db.Department.create(req.body).then(function(data) {
+            res.json(data)
+        });
+    });
+
+    app.post("/settings/employees", function(req, res) {
+        db.Employee.create(req.body).then(function(data){
+            res.json(data);
+        })
+    });
     // app.post("/", function (req, res) {
     //     db.burger.create(req.body).then(function (yonge) {
     //         res.json(yonge);

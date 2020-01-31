@@ -4,6 +4,6 @@ const render = function(data){
 <div>department names</div>
 <div># of employees</div>
     `
-}
+};
 
 exports.render = render;
