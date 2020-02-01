@@ -1,8 +1,10 @@
 const db = require('../models');
 const homePage = require('../views/layouts/homePage');
+const addDepartment = require('../views/layouts/addDepartment')
 const settings = require('../views/settings');
 const loginScreen = require('../views/timeStamp-login');
-const departments = require('../views/departments');
+const allDepartments = require('../views/allDepartments');
+const departmentsList = require('../views/allDepartmentsList')
 const employees = require('../views/employee');
 
 module.exports = function (app) {
@@ -15,11 +17,19 @@ module.exports = function (app) {
     });
 
     app.get("/settings/adddepartments", function(req, res) {
-        res.send(homePage.render(departments.render()));
+        db.Department.findAll({
+            raw: true
+        }).then(function(data){
+            res.send(addDepartment.render(allDepartments.render(data)));
+        })
     });
 
     app.get("/settings/addemployees", function(req, res) {
-        res.send(homePage.render(employees.render()));
+        db.Department.findAll({
+            raw: true
+        }).then(function(data){
+            res.send(homePage.render(employees.render(departmentsList.render(data))));
+        })
     });
 
     app.post("/settings/adddepartments", function(req, res) {

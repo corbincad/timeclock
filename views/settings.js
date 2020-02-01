@@ -1,4 +1,4 @@
-const render = function(data){
+const render = function(){
     return `
     <section class="hero is-fullheight">
         <div class="columns">

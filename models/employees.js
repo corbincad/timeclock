@@ -14,7 +14,8 @@ module.exports = function(sequelize, DataTypes){
             validate: {
                 isEmail: true
             }
-        }
+        },
+        loginID: DataTypes.STRING
     });
 
     Model.associate = function(models){

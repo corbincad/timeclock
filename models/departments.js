@@ -3,6 +3,12 @@ module.exports = function(sequelize, DataTypes) {
         departmentName:{
             type: DataTypes.STRING,
             allowNull: false
+        },
+        numEmployees:{
+            type: DataTypes.INTEGER
+        },
+        Budget: {
+            type: DataTypes.INTEGER
         }
     });
 

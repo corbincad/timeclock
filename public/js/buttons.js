@@ -35,6 +35,7 @@ $(document).ready(function () {
             function addDepartment(dep){
                 $.post('/settings/adddepartments', dep, function(){
                     $('#depName').val('');
+                    location.reload();
                 })
             }
 
@@ -46,13 +47,13 @@ $(document).ready(function () {
         event.preventDefault();
 
         var val = Math.floor(1000 + Math.random() * 9000);
-        console.log(val);
         
         const newEmployee = {
             firstName: $('#firstName').val().trim(),
             lastName: $('#lastName').val().trim(),
-            email: $('#email').val().trim()
-            // loginID: 
+            email: $('#email').val().trim(),
+            loginID: val,
+            DepartmentId: $('#departmentList').val().trim()
         };
         
         console.log(newEmployee);
@@ -66,7 +67,6 @@ $(document).ready(function () {
 
         addEmployee(newEmployee);
     });
-
 });
 
 
