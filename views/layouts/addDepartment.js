@@ -37,7 +37,7 @@ const render = function(data) {
         <div class="column">
             <div id="namer">
                 <div id="id-input">
-                    <input type="text" name="namername" placeholder="Department Name" id="pinCode">
+                    <input type="text" name="namername" placeholder="Department Name" id="depName">
             </div>
 
         </div>
