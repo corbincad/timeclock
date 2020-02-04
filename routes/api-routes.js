@@ -6,6 +6,7 @@ const loginScreen = require('../views/timeStamp-login');
 const allDepartments = require('../views/allDepartments');
 const departmentsList = require('../views/allDepartmentsList')
 const employees = require('../views/employee');
+const allEmployees = require('../views/viewAllEmployees');
 
 module.exports = function (app) {
     app.get("/", function (req, res) {
@@ -34,9 +35,11 @@ module.exports = function (app) {
 
     app.get("/settings/viewemployees", function(req,res) {
         db.Employee.findAll({
-            raw: true
+            include: [{
+                all: true
+            }]
         }).then(function(data) {
-            res.send()
+            res.send(homePage.render(allEmployees.render(data)));
         })
     });
 
@@ -48,6 +51,16 @@ module.exports = function (app) {
 
     app.post("/settings/addemployees", function(req, res) {
         db.Employee.create(req.body).then(function(data){
+            res.json(data);
+        })
+    });
+
+    app.delete("/settings/viewemployees", function(req, res) {
+        db.Employee.destroy({
+            where: {
+                id: req.body.id
+            }
+        }).then(function(data){
             res.json(data);
         })
     });

@@ -1,30 +1,31 @@
 $(document).ready(function () {
 
-    $('#homeBtn').on('click', function(event){
+    $('#homeBtn').on('click', function (event) {
         event.preventDefault();
-        location.href= '/';
-    })
-    $('#settingsBtn').on('click', function(event){
+        location.href = '/';
+    });
+
+    $('#settingsBtn').on('click', function (event) {
         event.preventDefault();
         location.href = '/settings';
     })
 
-    $('#addDepartment').on('click', function(event){
+    $('#addDepartment').on('click', function (event) {
         event.preventDefault();
         location.href = '/settings/adddepartments';
     });
 
-    $('#employeePage').on('click', function(event){
+    $('#employeePage').on('click', function (event) {
         event.preventDefault();
         location.href = '/settings/addemployees'
-    })
+    });
 
-    $('#viewEmployees').on('click', function(event){
+    $('#viewEmployees').on('click', function (event) {
         event.preventDefault();
         location.href = '/settings/viewemployees'
-    })
+    });
 
-    
+
     $('#pinCode').keypress(function (event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 13) {
@@ -40,8 +41,8 @@ $(document).ready(function () {
                 departmentName: $('#depName').val().trim()
             }
 
-            function addDepartment(dep){
-                $.post('/settings/adddepartments', dep, function(){
+            function addDepartment(dep) {
+                $.post('/settings/adddepartments', dep, function () {
                     $('#depName').val('');
                     location.reload();
                 })
@@ -51,11 +52,11 @@ $(document).ready(function () {
         }
     });
 
-    $('#addEmployee').on('click', function(event) {
+    $('#addEmployee').on('click', function (event) {
         event.preventDefault();
 
-        var val = Math.floor(1000 + Math.random() * 9000);
-        
+        const val = Math.floor(1000 + Math.random() * 9000);
+
         const newEmployee = {
             firstName: $('#firstName').val().trim(),
             lastName: $('#lastName').val().trim(),
@@ -63,10 +64,10 @@ $(document).ready(function () {
             loginID: val,
             DepartmentId: $('#departmentList').val().trim()
         };
-        
+
         console.log(newEmployee);
-        function addEmployee (employee){
-            $.post('/settings/addemployees', employee, function(){
+        function addEmployee(employee) {
+            $.post('/settings/addemployees', employee, function () {
                 $('#firstName').val('');
                 $('#lastName').val('');
                 $('#email').val('');
@@ -76,6 +77,26 @@ $(document).ready(function () {
 
         addEmployee(newEmployee);
     });
+
+    $('.deleteBtn').on('click', function (event) {
+        event.preventDefault();
+
+        const idDestroy = {
+            id: parseInt(event.target.id)
+        }
+
+        function deleteEmployee(employee) {
+            $.ajax({
+                method: 'DELETE',
+                url: '/settings/viewemployees',
+                data: employee
+            }).then(function () {
+                location.reload();
+            })
+        };
+
+        deleteEmployee(idDestroy);
+    })
 });
 
 
