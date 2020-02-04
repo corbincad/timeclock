@@ -18,7 +18,7 @@ const render = function(data) {
     </head>
     <body>
     
-    <section class="hero is-fullheight">
+    <div class="columns">
 
     <div class="columns">
 
@@ -53,7 +53,7 @@ const render = function(data) {
 
     </div>
 
-    </section>
+    </div>
 
     
 
