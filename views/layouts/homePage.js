@@ -6,8 +6,10 @@ const render = function (data) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!--bulma-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+        <!--SPECTRE CSS LIBRARY-->
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
         <link rel="stylesheet" href="/css/style.css">
         <!--google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Kanit:300&display=swap" rel="stylesheet">
