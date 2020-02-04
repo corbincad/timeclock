@@ -7,7 +7,6 @@ const render = function(){
             
         </div>
         <div class="columns">
-            <button type="button" class="color-change" id='deleteEmployee'>delete employee</button>
             <button type="button" class="color-change" id='viewEmployees'>view all employees</button>
         </div>
     </section>
