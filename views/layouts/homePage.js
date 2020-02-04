@@ -18,16 +18,16 @@ const render = function (data) {
     </head>
     <body>
     
-    <section class="hero is-fullheight">
+    <div class="container">
 
     <div class="columns">
 
         <div class="column">
-            <button id="homeBtn" class="color-change">HOME</button>
+            <input type="image" src="/logo/homeIcon.png" id="reportsBtn" class="color-change">
         </div>
 
         <div class="column">
-            <button id="settingsBtn" class="color-change">SETTINGS</button>
+            <input type="image" src="/logo/gearCog2.png" id="settingsBtn" class="color-change">
         </div>
 
     </div>
@@ -40,9 +40,7 @@ const render = function (data) {
 
     </div>
 
-    </section>
-
-    
+    </div>
 
 </div>
 
