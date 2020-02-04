@@ -33,7 +33,8 @@ const render = function(data) {
     <div class="columns">
 
         <div class="column" >
-        <input type="text" name="departments" placeholder="department name" id="depName" />
+        <input type="text" name="departments" placeholder="Department Name" id="depName" />
+        <input type="text" name="departmentBudget" placeholder="Monthly Budget" id="depBudget" />
             ${data}
         </div>
 

@@ -32,6 +32,14 @@ module.exports = function (app) {
         })
     });
 
+    app.get("/settings/viewemployees", function(req,res) {
+        db.Employee.findAll({
+            raw: true
+        }).then(function(data) {
+            res.send()
+        })
+    });
+
     app.post("/settings/adddepartments", function(req, res) {
         db.Department.create(req.body).then(function(data) {
             res.json(data)

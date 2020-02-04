@@ -1,6 +1,9 @@
 $(document).ready(function () {
 
-
+    $('#homeBtn').on('click', function(event){
+        event.preventDefault();
+        location.href= '/';
+    })
     $('#settingsBtn').on('click', function(event){
         event.preventDefault();
         location.href = '/settings';
@@ -14,6 +17,11 @@ $(document).ready(function () {
     $('#employeePage').on('click', function(event){
         event.preventDefault();
         location.href = '/settings/addemployees'
+    })
+
+    $('#viewEmployees').on('click', function(event){
+        event.preventDefault();
+        location.href = '/settings/viewemployees'
     })
 
     
@@ -62,6 +70,7 @@ $(document).ready(function () {
                 $('#firstName').val('');
                 $('#lastName').val('');
                 $('#email').val('');
+                $('#departmentList').val('');
             })
         };
 
