@@ -23,7 +23,7 @@ const render = function (data) {
     <div class="columns">
 
         <div class="column">
-            <input type="image" src="/logo/homeIcon.png" id="reportsBtn" class="color-change">
+            <input type="image" src="/logo/homeIcon.png" id="homeBtn" class="color-change">
         </div>
 
         <div class="column">

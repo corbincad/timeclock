@@ -1,6 +1,10 @@
 const render = function(data){
     return `
-    <input type="text" placeholder="First Name" id="firstName">
+    <div id="namer">
+            <div id="id-input">
+            <input type="text" name="namername" placeholder="First Name" id="firstName">
+            </div>
+
 <input type="text" placeholder="Last Name" id="lastName">
 <input type="text" placeholder="Employee's Email" id="email">
 <select id="departmentList">

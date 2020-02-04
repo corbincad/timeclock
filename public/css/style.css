@@ -177,9 +177,20 @@ button.color-change {
   margin: 50px;
 }
 
-#pleaseGoUp {
+#addDepartment{
 
-  margin-top: -100px;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+#employeePage{
+
+  margin-right: 5%;
+}
+
+#containerForSettings{
+
+  margin-top: 15%;
 }
 
 

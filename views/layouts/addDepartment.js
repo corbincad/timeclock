@@ -6,8 +6,10 @@ const render = function(data) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!--bulma-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+        <!--SPECTRE CSS-->
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
         <link rel="stylesheet" href="/css/style.css">
         <!--google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Kanit:300&display=swap" rel="stylesheet">
@@ -25,17 +27,28 @@ const render = function(data) {
         </div>
 
         <div class="column">
-            <button id="settingsBtn" class="color-change">SETTINGS</button>
+        <input type="image" src="/logo/gearCog2.png" id="settingsBtn" class="color-change">
         </div>
 
     </div>
 
     <div class="columns">
 
-        <div class="column" >
-        <input type="text" name="departments" placeholder="Department Name" id="depName" />
-        <input type="text" name="departmentBudget" placeholder="Monthly Budget" id="depBudget" />
-            ${data}
+        <div class="column">
+            <div id="namer">
+                <div id="id-input">
+                    <input type="text" name="namername" placeholder="Department Name" id="pinCode">
+            </div>
+
+        </div>
+
+        <div class="column">
+            <div id="namer">
+                <div id="id-input">
+                    <input type="text" name="departmentBudget" placeholder="Monthly Budget" id="depBudget" />
+                        ${data}
+                </div>
+            </div>
         </div>
 
     </div>
