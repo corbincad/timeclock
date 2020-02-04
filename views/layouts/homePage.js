@@ -21,7 +21,7 @@ const render = function (data) {
     <div class="columns">
 
         <div class="column">
-            <button id="reportsBtn" class="color-change">REPORTS</button>
+            <button id="homeBtn" class="color-change">HOME</button>
         </div>
 
         <div class="column">
