@@ -9,6 +9,7 @@ const allDepartments = require('../views/allDepartments');
 const departmentsList = require('../views/allDepartmentsList')
 const employees = require('../views/employee');
 const allEmployees = require('../views/viewAllEmployees');
+const memberPage = require('../views/memberPage');
 
 module.exports = function (app) {
     app.get("/", function (req, res) {
@@ -23,7 +24,6 @@ module.exports = function (app) {
         db.Department.findAll({
             raw: true
         }).then(function (data) {
-            console.log(data)
             res.send(addDepartment.render(allDepartments.render(data)));
         })
     });
@@ -50,13 +50,12 @@ module.exports = function (app) {
         db.Employee.findOne(
             {
             where: {
-                loginID: req.body.loginID
+                loginID: req.query.loginID
             }
         }).then(function(data) {
-            res.send(homePage.render());
-            console.log(data);
+            res.send(homePage.render(memberPage.render(data)));
         })
-    })
+    });
 
     app.post("/settings/adddepartments", function (req, res) {
         db.Department.create(req.body).then(function (data) {
