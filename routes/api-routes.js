@@ -46,6 +46,18 @@ module.exports = function (app) {
         })
     });
 
+    app.get("/home", function (req, res) {
+        db.Employee.findOne(
+            {
+            where: {
+                loginID: req.body.loginID
+            }
+        }).then(function(data) {
+            res.send(homePage.render());
+            console.log(data);
+        })
+    })
+
     app.post("/settings/adddepartments", function (req, res) {
         db.Department.create(req.body).then(function (data) {
             res.json(data)

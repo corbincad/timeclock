@@ -5,9 +5,9 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         },
         numEmployees: DataTypes.STRING,
-        Budget: {
+        departmentBudget: {
             type: DataTypes.INTEGER
-        }
+        },
     });
 
     Model.associate = function(models) {
