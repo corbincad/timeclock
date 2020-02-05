@@ -1,6 +1,8 @@
 const db = require('../models');
 const homePage = require('../views/layouts/homePage');
-const addDepartment = require('../views/layouts/addDepartment')
+const addDepartment = require('../views/layouts/addDepartment');
+const viewAllEmployees = require('../views/layouts/viewEmployees');
+
 const settings = require('../views/settings');
 const loginScreen = require('../views/timeStamp-login');
 const allDepartments = require('../views/allDepartments');
@@ -17,71 +19,51 @@ module.exports = function (app) {
         res.send(homePage.render(settings.render()));
     });
 
-    app.get("/settings/adddepartments", function(req, res) {
+    app.get("/settings/adddepartments", function (req, res) {
         db.Department.findAll({
             raw: true
-        }).then(function(data){
+        }).then(function (data) {
             res.send(addDepartment.render(allDepartments.render(data)));
         })
     });
 
-    app.get("/settings/addemployees", function(req, res) {
+    app.get("/settings/addemployees", function (req, res) {
         db.Department.findAll({
             raw: true
-        }).then(function(data){
+        }).then(function (data) {
             res.send(homePage.render(employees.render(departmentsList.render(data))));
         })
     });
 
-    app.get("/settings/viewemployees", function(req,res) {
+    app.get("/settings/viewemployees", function (req, res) {
         db.Employee.findAll({
             include: [{
                 all: true
             }]
-        }).then(function(data) {
-            res.send(homePage.render(allEmployees.render(data)));
+        }).then(function (data) {
+            res.send(viewAllEmployees.render(allEmployees.render(data)));
         })
     });
 
-    app.post("/settings/adddepartments", function(req, res) {
-        db.Department.create(req.body).then(function(data) {
+    app.post("/settings/adddepartments", function (req, res) {
+        db.Department.create(req.body).then(function (data) {
             res.json(data)
         });
     });
 
-    app.post("/settings/addemployees", function(req, res) {
-        db.Employee.create(req.body).then(function(data){
+    app.post("/settings/addemployees", function (req, res) {
+        db.Employee.create(req.body).then(function (data) {
             res.json(data);
         })
     });
 
-    app.delete("/settings/viewemployees", function(req, res) {
+    app.delete("/settings/viewemployees", function (req, res) {
         db.Employee.destroy({
             where: {
                 id: req.body.id
             }
-        }).then(function(data){
+        }).then(function (data) {
             res.json(data);
         })
     });
-    // app.post("/", function (req, res) {
-    //     db.burger.create(req.body).then(function (yonge) {
-    //         res.json(yonge);
-    //     })
-    // });
-
-    // app.put("/", function (req, res) {
-    //     console.log(req.body);
-    //     db.burger.update( 
-    //         {
-    //         devoured: true
-    //         },
-    //         {
-    //             where: {
-    //                 id: req.body.id
-    //             }
-    //         }).then(function (yonge) {
-    //             res.json(yonge);
-    //         });
-    // });
 };

@@ -38,7 +38,7 @@ $(document).ready(function () {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 13) {
             const newDep = {
-                departmentName: $('#depName').val().trim()
+                departmentName: $('#depName').val().trim(),
             }
 
             function addDepartment(dep) {

@@ -4,9 +4,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         },
-        numEmployees:{
-            type: DataTypes.INTEGER
-        },
+        numEmployees: DataTypes.STRING,
         Budget: {
             type: DataTypes.INTEGER
         }
