@@ -1,7 +1,7 @@
 const render = function(data){
     return `
 
-        <div id="colorBorder" class="columns">
+        <div class="columns">
             
             <div id="borderForData" class="column">
                 <div>${data.departmentName}</div>
