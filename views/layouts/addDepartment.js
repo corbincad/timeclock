@@ -42,15 +42,19 @@ const render = function(data) {
                 </div>
             </div>
 
-        </div>
-
-        <div class="column">
-            <div id="namer">
-                <div id="id-input">
-                    <input type="text" name="departmentBudget" placeholder="Monthly Budget" id="depBudget" />
-                        ${data}
+            <div class="column">
+                <div id="namer">
+                    <div id="id-input">
+                        <input type="text" name="departmentBudget" placeholder="Monthly Budget" id="depBudget"/>
                 </div>
             </div>
+            
+        </div>
+
+        </div>
+
+        <div class="columns">
+            <div class="column"> ${data} </div>
         </div>
 
     </div>

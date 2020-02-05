@@ -1,8 +1,23 @@
 const render = function(data){
     return `
-        <div>${data.departmentName}</div>
-        <div>${data.numEmployees}</div>
-        <div>${data.departmentBudget}</div>
+
+        <div id="colorBorder" class="columns">
+            
+            <div id="borderForData" class="column">
+                <div>${data.departmentName}</div>
+            </div>
+        
+            <div id="borderForData" class="column">
+                <div>${data.numEmployees}</div>
+            </div>
+        
+
+            <div id="borderForData" class="column">
+                <div>${data.budget}</div>
+            </div>
+
+        </div>
+        
     `
 };
 
