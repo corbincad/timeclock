@@ -29,21 +29,37 @@ $(document).ready(function () {
     $('#pinCode').keypress(function (event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 13) {
-            console.log($('#pinCode').val().trim());
+
+            const pin = {
+                loginID: $('#pinCode').val().trim()
+            }
+
+            function loginwithID(p) {
+                $.ajax({
+                    method: 'GET',
+                    url: '/home',
+                    data: p
+                }).then(function () {
+                    $('#pinCode').val('')
+                });
+            }
+
+            loginwithID(pin);
         }
     });
 
-
-    $('#depName').keypress(function (event) {
+    $('#depBudget').keypress(function (event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 13) {
             const newDep = {
                 departmentName: $('#depName').val().trim(),
+                departmentBudget: $('#depBudget').val().trim()
             }
 
             function addDepartment(dep) {
                 $.post('/settings/adddepartments', dep, function () {
                     $('#depName').val('');
+                    $('#depBudget').val('')
                     location.reload();
                 })
             }
