@@ -17,27 +17,29 @@ const render = function(data) {
         <title>Time Clock</title>
     </head>
     <body>
-    
-    <div class="columns">
 
-    <div class="columns">
+    <div class="container">
 
-        <div class="column">
-            <button id="homeBtn" class="color-change">HOME</button>
+        <div class="columns">
+
+            <div class="column">
+                <input type="image" src="/logo/homeIcon.png" id="homeBtn" class="color-change"></input>
+            </div>
+
+            <div class="column">
+                <input type="image" src="/logo/gearCog2.png" id="settingsBtn" class="color-change">
+            </div>
+
         </div>
 
-        <div class="column">
-        <input type="image" src="/logo/gearCog2.png" id="settingsBtn" class="color-change">
-        </div>
+        <div class="columns">
 
-    </div>
-
-    <div class="columns">
-
-        <div class="column">
-            <div id="namer">
-                <div id="id-input">
-                    <input type="text" name="namername" placeholder="Department Name" id="depName">
+            <div class="column">
+                <div id="namer">
+                    <div id="id-input">
+                        <input type="text" name="namername" placeholder="Department Name" id="depName">
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -52,12 +54,6 @@ const render = function(data) {
         </div>
 
     </div>
-
-    </div>
-
-    
-
-</div>
 
         <script
         src="https://code.jquery.com/jquery-3.4.1.min.js"
