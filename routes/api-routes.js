@@ -23,6 +23,7 @@ module.exports = function (app) {
         db.Department.findAll({
             raw: true
         }).then(function (data) {
+            console.log(data)
             res.send(addDepartment.render(allDepartments.render(data)));
         })
     });
