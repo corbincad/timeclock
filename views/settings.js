@@ -3,9 +3,9 @@ const render = function(){
     <div id="containerForSettings" class="columns">
 
         <div id="columnsForSettings" class="column">
-            <button type='button' class="color-change" id='addDepartment'>add department</button>
-            <button type="button" class="color-change" id='employeePage'>add employee</button>
-            <button type="button" class="color-change" id='viewEmployees'>view all employees</button>
+            <button type='button' class="color-change" id='addDepartment'>Add Department</button>
+            <button type="button" class="color-change" id='employeePage'>Add Employee</button>
+            <button type="button" class="color-change" id='viewEmployees'>View All Employees</button>
         </div>
 
     </div>
