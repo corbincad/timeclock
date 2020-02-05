@@ -29,19 +29,15 @@ $(document).ready(function () {
     $('#pinCode').keypress(function (event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 13) {
-
+            console.log($('#pinCode').val().trim())
             const pin = {
                 loginID: $('#pinCode').val().trim()
             }
 
             function loginwithID(p) {
-                $.ajax({
-                    method: 'GET',
-                    url: '/home',
-                    data: p
-                }).then(function () {
+                $.get('/home', p, function() {
                     $('#pinCode').val('')
-                });
+                })
             }
 
             loginwithID(pin);
