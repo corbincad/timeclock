@@ -13,7 +13,7 @@ const render = function(data){
         
 
             <div id="borderForData" class="column">
-                <div>${data.budget}</div>
+                <div>${data.departmentBudget}</div>
             </div>
 
         </div>

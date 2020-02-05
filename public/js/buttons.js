@@ -29,14 +29,13 @@ $(document).ready(function () {
     $('#pinCode').keypress(function (event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 13) {
-            console.log($('#pinCode').val().trim())
             const pin = {
                 loginID: $('#pinCode').val().trim()
             }
 
             function loginwithID(p) {
                 $.get('/home', p, function() {
-                    $('#pinCode').val('')
+                    $('#pinCode').val('');
                 })
             }
 
@@ -90,6 +89,25 @@ $(document).ready(function () {
         addEmployee(newEmployee);
     });
 
+    $('#searchEmployees').keypress(function(event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode === 13) {
+            const unsplitEmployee = $('#searchEmployees').val();
+            const splitEmployee = unsplitEmployee.trim().split(" ");
+
+            const searchParams = {
+                firstName: splitEmployee[0],
+                lastName: splitEmployee[1]
+            }
+
+            function searchForEmployee(searchInfo) {
+                $.get('/settings/viewemployees', searchInfo, function(){
+
+                })
+            }
+
+        }
+    })
     $('.deleteBtn').on('click', function (event) {
         event.preventDefault();
 

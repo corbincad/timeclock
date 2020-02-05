@@ -46,15 +46,19 @@ module.exports = function (app) {
         })
     });
 
+    app.get('/home', function (req, res) {
+        res.send(homePage.render(memberPage.render()))
+    })
+
     app.get("/home", function (req, res) {
         db.Employee.findOne(
             {
-            where: {
-                loginID: req.query.loginID
-            }
-        }).then(function(data) {
-            res.send(homePage.render(memberPage.render(data)));
-        })
+                where: {
+                    loginID: req.query.loginID
+                }
+            }).then(function (data) {
+                res.send(homePage.render(memberPage.render(data)));
+            })
     });
 
     app.post("/settings/adddepartments", function (req, res) {
