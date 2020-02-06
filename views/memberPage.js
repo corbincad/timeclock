@@ -1,4 +1,5 @@
 const render = function(data){
+    console.log(data);
     return `
 
         <div id="welcomeText" class="columns"
@@ -7,6 +8,8 @@ const render = function(data){
             </div>
         </div>
         
+        <button type='button' id='clockIn'>Clock In</button>
+    <button type='button' id='clockOut'>Clock Out</button>
     `
 }
 
