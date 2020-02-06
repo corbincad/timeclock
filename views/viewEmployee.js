@@ -2,6 +2,7 @@ const render = function(data){
     return `
 
     <div class="columns">
+    
         <div id="borderForData" class="column">
             <div>${data.firstName} ${data.lastName}</div>
         </div>
@@ -18,7 +19,7 @@ const render = function(data){
             <div>${data.Department.departmentName}</div>
         </div>
 
-        <input type="image" src="/logo/deleteIcon.png" class="color-change deleteBtn" id='${data.id}'></input>
+        <input type="image" src="/logo/deleteIcon.png" class="color-change deleteBtn"  id='${data.id}'></input>
 
     </div>
     `
