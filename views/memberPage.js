@@ -1,6 +1,11 @@
 const render = function(data){
     return `
-        <h4>Welcome ${data.firstName} ${data.lastName}!</h4>
+
+        <div id="welcomeText" class="columns"
+            <div class="column"
+                <p>Welcome, ${data.firstName} ${data.lastName}!</p>
+            </div>
+        </div>
         
     `
 }
