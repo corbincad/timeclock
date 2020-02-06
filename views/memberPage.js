@@ -3,13 +3,14 @@ const render = function(data){
     return `
 
         <div id="welcomeText" class="columns"
-            <div class="column"
+            <div id="pleaseMove" class="column"
                 <p>Welcome, ${data.firstName} ${data.lastName}!</p>
+                <button type='button' class="color-change move" id='clockIn'>Clock In</button>
+                <button type='button' class="color-change move" id='clockOut'>Clock Out</button>
             </div>
         </div>
         
-        <button type='button' id='clockIn'>Clock In</button>
-    <button type='button' id='clockOut'>Clock Out</button>
+        
     `
 }
 

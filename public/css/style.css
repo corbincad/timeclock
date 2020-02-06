@@ -215,8 +215,18 @@ button.color-change {
 
   color: rgb(0, 114, 175);
   font-size: 50px;
-  text-align: center;
-  border: 10px solid white;
+  padding-left: 5%;
+  border: 10px solid grey;
+}
+
+.move{
+
+  margin-left: 8%;
+}
+
+#pleaseMove{
+
+  margin: 50px;
 }
 
 
