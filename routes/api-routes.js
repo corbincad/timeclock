@@ -46,13 +46,10 @@ module.exports = function (app) {
         })
     });
 
-    app.get('/home', function (req, res) {
-        res.send(homePage.render(memberPage.render()))
-    })
-
     app.get("/home", function (req, res) {
         db.Employee.findOne(
             {
+                raw: true,
                 where: {
                     loginID: req.query.loginID
                 }
@@ -60,6 +57,21 @@ module.exports = function (app) {
                 res.send(homePage.render(memberPage.render(data)));
             })
     });
+
+    app.get("/settings/viewemployees/searched", function (req, res) {
+        db.Employee.findAll({
+            include: [{
+                all: true
+            }],
+            where: {
+                firstName: req.query.firstName,
+                lastName: req.query.lastName
+            }
+        }).then(function (data) {
+            console.log(data[0].firstName);
+            res.send(viewAllEmployees.render(allEmployees.render(data)));
+        })
+    })
 
     app.post("/settings/adddepartments", function (req, res) {
         db.Department.create(req.body).then(function (data) {

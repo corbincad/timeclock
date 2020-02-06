@@ -35,7 +35,7 @@ $(document).ready(function () {
 
             function loginwithID(p) {
                 $.get('/home', p, function() {
-                    $('#pinCode').val('');
+                    location.href = '/home?loginID=' + $('#pinCode').val().trim();
                 })
             }
 
@@ -101,13 +101,16 @@ $(document).ready(function () {
             }
 
             function searchForEmployee(searchInfo) {
-                $.get('/settings/viewemployees', searchInfo, function(){
-
+                $.get('/settings/viewemployees/searched', searchInfo, function(){
+                    location.href = '/settings/viewemployees/searched?firstName=' + splitEmployee[0] + '&lastName=' + splitEmployee[1];
                 })
             }
 
+            searchForEmployee(searchParams);
+
         }
-    })
+    });
+
     $('.deleteBtn').on('click', function (event) {
         event.preventDefault();
 

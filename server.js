@@ -19,24 +19,3 @@ db.sequelize.sync().then(function () {
     });
 
 });
-
-
-// do {
-//     try {
-//         await db.employee.findorcreate({
-//             where: {
-//                 login: function () { }
-//             },
-//             defaults: {
-//                 firstName: ,
-//                 lastName: ,
-//                 email: ,
-//                 loginID: ,
-//             }
-//         });
-//     } catch (error) {
-//         if (error) {
-
-//         }
-//     } while (!unique) { }
-// }
