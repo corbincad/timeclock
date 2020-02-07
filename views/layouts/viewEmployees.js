@@ -35,7 +35,7 @@ const render = function (data) {
     <div class="columns">
 
         <div class="column" >
-        <input type="text" id="searchEmployees">
+        <input type="text" placeholder="Search Employees" id="searchEmployees">
             ${data}
         </div>
 
