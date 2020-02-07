@@ -111,6 +111,38 @@ $(document).ready(function () {
         }
     });
 
+    $('#clockIn').on('click', function(event) {
+        event.preventDefault();
+
+        const info = {
+            timeId: 'rightNow'
+        }
+
+        function addClockIn (info){
+            $.post('/home', info, function(){
+                console.log(info);
+            })
+        }
+
+        addClockIn(info);
+    });
+
+    $('#clockOut').on('click', function(event) {
+        event.preventDefault();
+
+        const info = {
+            timeId: 'rightNow'
+        }
+
+        function addClockOut (info){
+            $.post('/home', info, function(){
+                console.log(info);
+            })
+        }
+
+        addClockOut(info);
+    });
+
     $('.deleteBtn').on('click', function (event) {
         event.preventDefault();
 

@@ -73,6 +73,18 @@ module.exports = function (app) {
         })
     })
 
+    app.post('/home', function(req, res) {
+        db.Clockin.create(req.body).then(function(data){
+            res.json(data);
+        })
+    });
+
+    app.post('/home', function(req, res) {
+        db.Clockout.create(req.body).then(function(data){
+            res.json(data);
+        })
+    })
+
     app.post("/settings/adddepartments", function (req, res) {
         db.Department.create(req.body).then(function (data) {
             res.json(data)
