@@ -1,0 +1,26 @@
+{
+    "development": {
+      "username": "root",
+      "password": "sterek12",
+      "database": "timeclock_db",
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "operatorsAliases": false
+    },
+    "test": {
+      "username": "root",
+      "password": null,
+      "database": "database_test",
+      "host": "127.0.0.1",
+      "dialect": "mysql",
+      "operatorsAliases": false
+    },
+    "production": {
+      "username": "xxzgq1i3afmsunpf",
+      "password": "lgedh4vbkonzogyx",
+      "database": "ndzz6wtsksybfuut",
+      "host": "uoa25ublaow4obx5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+      "dialect": "mysql",
+      "operatorsAliases": false
+    }
+  }
