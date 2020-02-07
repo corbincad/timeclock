@@ -7,10 +7,6 @@ const render = function(data){
                 <div>${data.departmentName}</div>
             </div>
         
-            <div id="borderForData" class="column">
-                <div>${data.numEmployees}</div>
-            </div>
-        
 
             <div id="borderForData" class="column">
                 <div>${data.departmentBudget}</div>
